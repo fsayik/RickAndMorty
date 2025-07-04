@@ -9,14 +9,11 @@ import UIKit
 
 class RMCharacterVC: UIViewController , RMCharacterListViewDelegate{
    
-    
-
     // MARK: - Variable
-    private let listView = RMCharacterListView()
-    
+   
     
     // MARK: - UI Components
-  
+    private let listView = RMCharacterListView()
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -44,6 +41,10 @@ class RMCharacterVC: UIViewController , RMCharacterListViewDelegate{
     
     func rmCharacterListView(_ characterListView: RMCharacterListView, didSelectCharacter character: RMCharacter) {
         //open character detail screen
+        let viewModel = RMCharacterDetailViewViewModel(character: character)
+        let detailVC = RMCharacterDetailVC(viewModel: viewModel)
+        detailVC.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
 }

@@ -17,11 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
        
         
         guard let vindowScene = (scene as? UIWindowScene) else { return }
-        
-        let vindow = UIWindow(windowScene: vindowScene)
         let mainController = RMTabVC()
-        let navigaionController = UINavigationController(rootViewController:mainController)
-        vindow.rootViewController = navigaionController
+        let vindow = UIWindow(windowScene: vindowScene)
+        //let navigaionController = UINavigationController(rootViewController:mainController)
+        vindow.rootViewController = mainController
         vindow.makeKeyAndVisible()
         self.window = vindow
     }
