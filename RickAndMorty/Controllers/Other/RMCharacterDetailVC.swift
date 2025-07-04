@@ -1,19 +1,18 @@
 //
-//  RMSettingsVC.swift
+//  RMCharacterDetailVC.swift
 //  RickAndMorty
 //
-//  Created by Ferhat Şayık on 23.04.2024.
+//  Created by Ferhat Şayık on 3.07.2025.
 //
 
 import UIKit
 
-class RMSettingsVC: UIViewController {
+class RMCharacterDetailVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Settings"
-        //view.backgroundColor = .systemGray
-        
+
+        // Do any additional setup after loading the view.
     }
     
 

@@ -11,6 +11,7 @@ class RMEpisodeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Episode"
         //view.backgroundColor = .systemMint
     }
     

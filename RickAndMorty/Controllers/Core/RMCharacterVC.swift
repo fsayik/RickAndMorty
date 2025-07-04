@@ -7,22 +7,43 @@
 
 import UIKit
 
-class RMCharacterVC: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //view.backgroundColor = .systemRed
-    }
+class RMCharacterVC: UIViewController , RMCharacterListViewDelegate{
+   
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Variable
+    private let listView = RMCharacterListView()
+    
+    
+    // MARK: - UI Components
+  
+    
+    // MARK: - LifeCycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Character"
+        
+        setupUI()
+   
     }
-    */
-
+    // MARK: - UI Setup
+    private func setupUI() {
+        listView.delegate = self
+        view.addSubview(listView)
+        
+        NSLayoutConstraint.activate([
+            listView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            listView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            listView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            listView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+           
+        ])
+    }
+    
+    
+    
+    func rmCharacterListView(_ characterListView: RMCharacterListView, didSelectCharacter character: RMCharacter) {
+        //open character detail screen
+    }
+    
 }

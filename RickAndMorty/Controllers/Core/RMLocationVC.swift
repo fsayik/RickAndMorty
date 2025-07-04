@@ -11,6 +11,7 @@ class RMLocationVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Location"
         //view.backgroundColor = .systemCyan
     }
     
